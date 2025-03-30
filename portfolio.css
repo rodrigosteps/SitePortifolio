@@ -26,7 +26,7 @@
 
 body/* cor do corpo do site*/
 {   
-    background-color:ivory; 
+    background-color:aliceblue; 
 }
 
 .header/* cabeçalho do site*/
@@ -102,7 +102,7 @@ h2 /* trabalhos recentes*/
 }
 #mula,#elf,#broken,#ride,#mulan,#tattoo,#polaroid
 {
-    border-radius: 0  80px;
+    border-radius: 20px;
   }
  .imagens/* ajustes nas imagens */
  {
@@ -110,6 +110,7 @@ h2 /* trabalhos recentes*/
    max-width: 360px;
    height: auto;
    filter:opacity(0.7);
+   
  }
  h4, .bio{
 
