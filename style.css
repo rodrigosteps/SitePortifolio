@@ -66,38 +66,41 @@ h2 /* PORTFOLIO*/ {
 
 .container /* ilustrações em grid*/ {
   display: flex;
+  flex-direction:row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  gap:40px 18px; 
   padding: 0 10%;
-  
+
   img {
     border-radius: 20px;
     max-width: 320px;
-    object-fit:cover;
   }
   
   .imagens/* ajustes nas imagens */ {
     filter: opacity(0.7);
-    text-align: center;
-    
-  }
+    text-align: center; 
+    max-height: 320px;
+ 
+ 
+   }
+
   .imagens:hover/*ajustes imagem hover*/ {
     transform: scale(1.1);
     transition: ease 0.4s;
     filter: opacity(1);
-    cursor: pointer;
-    pointer-events: stroke;
-    overflow: hidden;  
-    position: relative;
-    
+    cursor: pointer; 
   }
-  
+     
   .imagens:hover p{
-    text-shadow: #333c23 1px 2px 4px;
+    color: rgb(255, 255, 255);
+    text-shadow: #000000 1px 2px 2px;
+    background-color: #4047345d;
     transition: ease 0.2s;
+    translate: 0 -117%;
+    border-radius: 0  0 20px 20px;
     font-weight: bolder;
-      font-size: 30px;
+    font-size: 20px;
     }
     
   }
