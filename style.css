@@ -5,16 +5,10 @@
   box-sizing: border-box;
   font-family: "roboto", "Bree_Serif";
 }
-@font-face {
-  font-family: "roboto";
-  src: url(/portfolio/FONTS/Roboto/Roboto-VariableFont_wdth,wght.ttf);
+:root{
+  --legend: 'Sigmar One';
+  --name:'Titan One';
 }
-
-@font-face {
-  font-family: "Bree_Serif";
-  src: url(/portfolio/FONTS/Bree_Serif/BreeSerif-Regular.ttf);
-}
-
 
 body/* cor do corpo do site*/ {
   background-color: aliceblue;
@@ -42,10 +36,11 @@ body/* cor do corpo do site*/ {
   }
   
   h1/* nome do artista*/ {
-    font-size: 30px;
+    font-size: 2.5em;
     font-weight: 800px;
     color: #000000;
     text-shadow: 4px 2px rgba(0, 0, 0, 0.04);
+    font-family:var(--name) ;
   }
   
   h3/* skills do artista*/ {
@@ -56,9 +51,10 @@ body/* cor do corpo do site*/ {
 }
 
 h2 /* PORTFOLIO*/ {
+  font-family: 'Engagement';
   text-align: center;
   font-weight: 200;
-  font-size: 30px;
+  font-size: 6em;
   color: #333c23;
   text-shadow: 4px 2px rgba(0, 0, 0, 0.04);
   padding: 0 10px 20px 10px;
@@ -72,6 +68,9 @@ h2 /* PORTFOLIO*/ {
   gap:40px 18px; 
   padding: 0 10%;
 
+  p{
+  font-family: var(--name);
+  }
   img {
     border-radius: 20px;
     max-width: 320px;
@@ -87,20 +86,22 @@ h2 /* PORTFOLIO*/ {
 
   .imagens:hover/*ajustes imagem hover*/ {
     transform: scale(1.1);
-    transition: ease 0.4s;
+    transition: ease-in 0.3s;
     filter: opacity(1);
     cursor: pointer; 
-  }
-     
+  }   
+  
   .imagens:hover p{
-    color: rgb(255, 255, 255);
+    color: #fafafa;
     text-shadow: #000000 1px 2px 2px;
     background-color: #4047345d;
-    transition: ease 0.2s;
-    translate: 0 -117%;
+    transition: ease 0.1s;
+    translate: 0 -110%;
     border-radius: 0  0 20px 20px;
-    font-weight: bolder;
-    font-size: 20px;
+    font-size: 1.5em;
+    height: auto;
+    position: relative;
+    bottom: 0;
     }
     
   }
