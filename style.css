@@ -9,8 +9,9 @@
   --name: "Titan One";
 }
 
-body/* cor do corpo do site*/ {
+html,body/* cor do corpo do site*/ {
   background-color: aliceblue;
+  scroll-behavior: smooth;
 }
 
 /* cabeçalho do site*/
@@ -38,19 +39,17 @@ body/* cor do corpo do site*/ {
   }
 
   h1/* nome do artista*/ {
-    font-size: 2.5em;
+    font-size: 4em;
     font-weight: 800px;
     color: #000000;
     text-shadow: 4px 2px rgba(0, 0, 0, 0.04);
-    font-family: var(--name);
+    font-family: 'Racing Sans One';
   }
 
   h3/* skills do artista*/ {
-    font-size: 18px;
-
+    font-size: 1em;
     color: #585858;
-    font-family: var(--name);
-  }
+font-family: 'Racing Sans One';  }
 }
 
 .links {
@@ -96,7 +95,7 @@ h2 /* PORTFOLIO*/ {
 
   p {
     padding-left: 1em;
-    font-family: var(--name);
+    font-family: 'Racing Sans One';
   }
 
   img {
@@ -137,15 +136,19 @@ h2 /* PORTFOLIO*/ {
 }
 
 .BackToTop img{
-  width: 80px;
+  width: 40px;
 }
 .BackToTop {
-  width: 80px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  position: sticky;
+  justify-content: end;
+  margin: 50px 0;
 }
 
+a:visited{
+  color: inherit;
+}
 
 
 
