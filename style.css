@@ -43,13 +43,14 @@ html,body/* cor do corpo do site*/ {
     font-weight: 800px;
     color: #000000;
     text-shadow: 4px 2px rgba(0, 0, 0, 0.04);
-    font-family: 'Racing Sans One';
+    font-family: "Racing Sans One";
   }
 
   h3/* skills do artista*/ {
     font-size: 1em;
     color: #585858;
-font-family: 'Racing Sans One';  }
+    font-family: "Racing Sans One";
+  }
 }
 
 .links {
@@ -80,11 +81,6 @@ h2 /* PORTFOLIO*/ {
 }
 
 /*efeitos de transições*/
-.container:hover > :not(:hover) {
-  filter: blur(2px);
-  opacity: 0.2;
-  transition: 0.2s;
-}
 
 .container /* ilustrações em grid*/ {
   display: flex;
@@ -95,48 +91,27 @@ h2 /* PORTFOLIO*/ {
 
   p {
     padding-left: 1em;
-    font-family: 'Racing Sans One';
+    font-family: "Racing Sans One";
   }
 
-  img {
+  .imagens img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagens {
+    object-fit: cover;
+    overflow: hidden;
     border-radius: 24px;
-    width: 100%;
   }
 
-  .imagens/* ajustes nas imagens */ {
-    width: 320px;
-}
-
-
-/*transição nas ilustrações*/
-.imagens:hover img {
-  border-radius: 24px 24px 0px 0px;
-  border: solid 6px #1c1c1c;
-  cursor: pointer;
-
-}
-
-.imagens:hover {
-  transform: scale(1.2);
-  transition: 0.2s ease-in-out;
-  position: relative;
-  border-radius: 100px;}
-
-  .imagens:hover  p {
-    text-align: center;
-    transform: translateX(0%) translateY(-15%);
-    background-color: #1c1c1c;
-    border-radius: 0 0 24px 24px;
-    color: #fafafa;
-    opacity: 2;
-
-    font-size: 2em;
-    width: 100%;
-    padding: 0;
+  .imagens img:hover {
+    scale: 1.04;
+    transition: 900ms ease-in-out;
   }
 }
 
-.BackToTop img{
+.BackToTop img {
   width: 40px;
 }
 .BackToTop {
@@ -147,63 +122,68 @@ h2 /* PORTFOLIO*/ {
   margin: 50px 0;
 }
 
-a:visited{
+a:visited {
   color: inherit;
 }
 
-
-
-
 /*mobile view*/
 
-@media  screen and (max-width:480px) {
-  html,body{
+@media screen and (max-width: 480px) {
+  html,
+  body {
     scroll-behavior: smooth;
   }
+  .header {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
 
-  .container{
+    .social {
+      width: 100%;
+      margin: 5% auto;
+      padding: 0;
+      justify-content: center;
+    }
+  }
+
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
-  
-  .main h2{
-    width: 200px;
+
+
+  .BackToTop img {
+    width: 30px;
   }
 
+  .BackToTop {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+  }
 
-.BackToTop img{
-  width: 30px;
-}
+  a:visited {
+    color: inherit;
+  }
 
-.BackToTop{
-  width: 200px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  margin: 1em auto;
-  
-}
+  .Top {
+    display: flex;
+    flex-direction: row;
+    color: #585858;
+  }
+  .footer img {
+    width: 300px;
+  }
 
-a:visited{
-  color: inherit;
-}
-
-.Top {
-  display: flex;
-  flex-direction: row;
-  color: #585858;  
-}
-.footer img{
-  width:300px;
-}
-
-footer{
-  margin: 0px 0px;
-}
+  footer {
+    margin: 0px 0px;
+  }
 }
