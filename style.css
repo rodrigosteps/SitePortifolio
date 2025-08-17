@@ -39,7 +39,7 @@ html,body/* cor do corpo do site*/ {
   }
 
   h1/* nome do artista*/ {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 800px;
     color: #000000;
     text-shadow: 4px 2px rgba(0, 0, 0, 0.04);
@@ -73,11 +73,11 @@ h2 /* PORTFOLIO*/ {
   text-align: center;
   font-weight: 200;
   font-size: 5em;
-  color: #333c23;
+  color: #3f3f3f;
   text-shadow: 4px 2px rgba(0, 0, 0, 0.04);
-  margin: 0 auto 40px auto;
+  margin: 0 auto 0.5em auto;
   border-bottom: 1px solid;
-  width: 400px;
+
 }
 
 /*efeitos de transições*/
@@ -87,28 +87,45 @@ h2 /* PORTFOLIO*/ {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2em;
+  gap: 1em;
+  width: 1000px;
+  margin: 0 auto;
+
 
   p {
     padding-left: 1em;
     font-family: "Racing Sans One";
   }
 
-  .imagens img {
-    width: 100%;
-    height: 100%;
+  .imagens{
+    width: 20em;
+    overflow: hidden;
+    height: 25em;
+    border-radius: 16px;
   }
 
-  .imagens {
+  .imagens img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    overflow: hidden;
-    border-radius: 24px;
+  }
+
+.imagens:hover .legend {
+  display: flex;
+  translate: 0 -110%;
+  font-size: 3em;
+  color: #ffffff;
+  text-shadow: #000000 4px 2px 15px;
   }
 
   .imagens img:hover {
-    scale: 1.04;
-    transition: 900ms ease-in-out;
+scale: 1.08;
+transition: 900ms;
+   overflow: hidden;
+    object-fit: cover;
   }
+
+
 }
 
 .BackToTop img {
@@ -120,40 +137,45 @@ h2 /* PORTFOLIO*/ {
   flex-direction: row;
   justify-content: end;
   margin: 50px 0;
+    color: #3f3f3f;
 }
 
 a:visited {
   color: inherit;
 }
 
-/*mobile view*/
 
+
+/*mobile view 480px*/
 @media screen and (max-width: 480px) {
   html,
   body {
     scroll-behavior: smooth;
   }
-  .header {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
-
-    .social {
-      width: 100%;
-      margin: 5% auto;
-      padding: 0;
-      justify-content: center;
-    }
-  }
-
-  .container {
+  
+  .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+    margin: 0 auto;
   }
 
+  .header{
+    align-items: center;
+
+   h3{
+    font-size: 0.8em
+   }
+
+   .social{
+    justify-content: center;
+   }
+  }
+
+  .imagens{
+    margin: 0 auto;
+  }
 
   .BackToTop img {
     width: 30px;
@@ -186,4 +208,34 @@ a:visited {
   footer {
     margin: 0px 0px;
   }
+}
+
+
+/*mobile view 780px*/
+@media screen and (max-width: 780px) {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+}
+
+
+/*mobile view 1024px*/
+
+@media screen and (max-width:1024px) {
+    html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+  
 }
